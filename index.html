@@ -4,68 +4,210 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zando</title>
     <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css"
+      integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #444;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .autoplay-progress {
+        position: absolute;
+        right: 16px;
+        bottom: 16px;
+        z-index: 10;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: var(--swiper-theme-color);
+      }
+
+      .autoplay-progress svg {
+        --progress: 0;
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: 10;
+        width: 100%;
+        height: 100%;
+        stroke-width: 4px;
+        stroke: var(--swiper-theme-color);
+        fill: none;
+        stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+        stroke-dasharray: 125.6;
+        transform: rotate(-90deg);
+      }
+    </style>
   </head>
-  <body style="background-color: pink;">
-    <!-- Navigation --> 
+  <body style="background-color: pink">
+    <!-- Navigation -->
     <header>
-         <nav class="header_navbar">
-          <ul >
-            <li><a href="">men</a></li>
-            <li><a href="">women</a></li>
-            <li><a href="">kids</a></li>
-            <li><a href="">z.home</a></li>
-            <li><a href="">lifestlye</a></li>
-          </ul>
-          <!--logo  -->
-          <div class="logo"> 
-             <img src="https://zandoshops.com/images/ZANDO-NEW-LOGO-2025.png" alt="">
-         </div>
-         
-         <!-- research and icon-->
-          <div class="research">
-          <input type="text" placeholder="search">
+      <nav class="header_navbar">
+        <ul>
+          <li><a href="">men</a></li>
+          <li><a href="">women</a></li>
+          <li><a href="">kids</a></li>
+          <li><a href="">z.home</a></li>
+          <li><a href="">lifestlye</a></li>
+        </ul>
+        <!--logo  -->
+        <div class="logo">
+          <img
+            src="https://zandoshops.com/images/ZANDO-NEW-LOGO-2025.png"
+            alt=""
+          />
+        </div>
+
+        <!-- research and icon-->
+        <div class="research">
+          <input type="text" placeholder="search" />
           <i class="fa-regular fa-bell"></i>
           <i class="fa-regular fa-heart"></i>
           <i class="fa-solid fa-cart-shopping"></i>
-          </div>
-          <!-- register and login  -->
-          <nav class="register" >
-            <ul>
-              <li><a href="">register</a></li>
-              <li><a href="">login</a></li>
-            </ul>
-          </nav>
-         </nav> 
+        </div>
+        <!-- register and login  -->
+        <nav class="register">
+          <ul>
+            <li><a href="">register</a></li>
+            <li><a href="">login</a></li>
+          </ul>
+        </nav>
+      </nav>
     </header>
     <main>
       <div class="hero">
-          <div class="hero_image">
-            <img  src="https://zandokh.com/image/catalog/banner/2026/ZANDO App/Big Sale /11Years_Main_ZANDO (2160x1066).jpg" alt="">
-          </div>
-     
-      <div class="btn">
-         <button>zando</button>
-         <button>ten eleven</button>
-         <button>routine</button>
-         <button>tag space</button>
-         <button>361</button>
-         <button>Promelo</button>
-      </div>
+        <div class="hero_image">
+          <img
+            src="https://zandokh.com/image/catalog/banner/2026/ZANDO App/Big Sale /11Years_Main_ZANDO (2160x1066).jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="btn">
+          <button>zando</button>
+          <button>ten eleven</button>
+          <button>routine</button>
+          <button>tag space</button>
+          <button>361</button>
+          <button>Promelo</button>
+        </div>
         <div class="back">
-            
+          <!-- Swiper -->
+          <swiper-container
+            class="mySwiper"
+            pagination="true"
+            pagination-clickable="true"
+            space-between="30"
+            centered-slides="true"
+            autoplay-delay="2500"
+            autoplay-disable-on-interaction="true"
+          >
+            <swiper-slide
+              ><img
+                src="https://zandokh.com/image/catalog/banner/2026/ZANDO Web/Main_ZANDO (2160x543).jpg"
+                data-n="1"
+                draggable="true"
+            /></swiper-slide>
+            <swiper-slide
+              ><img
+                src="https://zandokh.com/image/catalog/banner/2026/ZANDO App/Collection/Web(2160x543).jpg"
+            /></swiper-slide>
+            <swiper-slide
+              ><img
+                src="https://zandokh.com/image/catalog/banner/2026/ZANDO App/Collection/updated size.jpg"
+                data-n="1"
+                draggable="true"
+            /></swiper-slide>
+            <swiper-slide
+              ><img
+                src="https://zandokh.com/image/catalog/banner/2026/ZANDO Web/All_under_$9.99_Cat (2160x543)-100.jpg"
+                data-n="1"
+                draggable="true"
+            /></swiper-slide>
+          </swiper-container>
         </div>
         <div class="cards">
-           <h1> 🪸Everyday Acessories✨</h1>
-           <h1>See More</h1>
-           <div class="card_1">
-               
-           </div>
+          <h1>🪸Everyday Acessories✨</h1>
+          <h1>See More</h1>
         </div>
-       </div>
+        <section class="menu_card_grid">
+          <div class="menu_card">
+            <img
+              src="https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-07/4122606613/10S26BEL001%20-%20BLACK%20(1)-cr-450x672.jpg"
+              alt=""
+            />
+            <div class="title">
+               <h3>US 15.16$</h3>
+            <p >Automatic Buckle Belt</p>  
+            </div>
+          </div>
+          <div class="menu_card">
+            <img
+              src="https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-05/10512604005/GS1560001-1-cr-450x672.jpg"
+              alt=""
+            />
+             <div class="title">
+               <h3>US 15.16$</h3>
+               <i class="fa-light fa-heart"></i>
+            </div>
+            <p >Automatic Buckle Belt</p>  
+          </div>
+          <div class="menu_card">
+            <img
+              src="https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-01/15225111257/TAKK3774-cr-450x672.jpg"
+              alt=""
+            />
+             <div class="title">
+               <h3>US 15.16$</h3>
+            <p >Automatic Buckle Belt</p>  
+            </div>
+          </div>
+          <div class="menu_card">
+            <img
+              src="https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-07/15225051000/3%20(14)-cr-450x672.jpg"
+              alt=""
+            />
+             <div class="title">
+               <h3>US 15.16$</h3>
+            <p>Automatic Buckle Belt</p>  
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
     <footer>
-           
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-element-bundle.min.js"></script>
   </body>
 </html>
