@@ -9,7 +9,7 @@
 header {
   width: 100%;
   height: 50px;
-  background-color:white;
+  background-color: white;
   position: fixed;
 }
 .header_navbar {
@@ -43,8 +43,32 @@ header {
   text-decoration: none;
   text-transform: uppercase;
 }
+.research {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #333333;
+}
+.btn_search {
+  border:solid 2px gray;
+  padding: 5px 5px;
+
+
+  border-radius: 5px;
+}
+.research .btn_search input {
+  border: none;
+  outline: none;
+  background-position:none ;
+  font-size: large;
+
+    width: 150px;
+  height: 30px;
+
+}
 .research i {
   font-size: 20px;
+
   /* padding: 20px; */
 }
 
@@ -70,7 +94,7 @@ header {
   width: 200px;
   height: 190px;
 }
-.btn .button img{
+.btn .button img {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -99,8 +123,8 @@ header {
   margin: auto;
 }
 .menu_card_grid {
-    width: 87%;
-    margin: auto;
+  width: 87%;
+  margin: auto;
   justify-content: space-between;
   margin: auto;
   display: grid;
@@ -124,15 +148,13 @@ header {
 .footer_title {
   width: 80%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   color: #191818;
   margin: auto;
 }
-.Footer_zando .mini_footer img {
+.Footer_zando img {
   width: 100px;
   background-size: cover;
-  
 }
 .navbar_title li a {
   text-decoration: none;
@@ -142,50 +164,53 @@ header {
 .navbar_title ul li {
   list-style: none;
 }
-.payment{
+.payment {
   color: #181717;
   width: 80%;
   justify-content: center;
   margin: auto;
   margin-top: 50px;
 }
-.payment img{
- background-size: contain;
- width: 400px;
- padding-top: 10px;
+.payment img {
+  background-size: contain;
+  width: 400px;
+  padding-top: 10px;
 }
-.zando{
+.zando {
   margin-left: 1110px;
 }
-.zando p{
+.zando p {
   font-size: 12px;
   padding: 40px;
 }
-.Grid-photos{
+.Grid-photos {
   width: 90%;
   justify-content: center;
   justify-items: center;
-  display:grid;
+  display: grid;
   margin: auto;
 }
-.Grid-photos img{
+.Grid-photos img {
   width: 450px;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   padding: 8px;
-} 
-.cards  h3{
- padding-right: 40px;
- text-transform: uppercase;
 }
-.title h3{
-   color: red;
-   margin-top: 25px;
+.cards h3 {
+  padding-right: 40px;
+  text-transform: uppercase;
+}
+.title h3 {
+  color: red;
+  margin-top: 25px;
 }
 .menu_card_grid {
   margin-top: 5px;
   margin-bottom: 90px;
 }
-.cards h3{
+.cards h3 {
   padding-top: 25px;
   text-transform: uppercase;
+}
+.footer_title .mini_footer h3 {
+  padding: 5px;
 }
